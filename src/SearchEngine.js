@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "./styles.css";
+import "./App.css";
 
 export default function SearcEngine() {
   let [city, SetCity] = useState();

@@ -1,5 +1,5 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
+import logo from './logo.svg';
+import "./App.css";
 import SearchEngine from "./SearchEngine";
 
 function App() {
@@ -11,10 +11,4 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
-);
+export default App;
