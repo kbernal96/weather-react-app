@@ -1,0 +1,18 @@
+.container {
+    margin-top: 5em;
+    padding: 2em;
+    border: 1px solid white;
+    max-width: 700px;
+}
+
+.temperature {
+    font-size: 64px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1;
+}
+
+.information li {
+    list-style-type: none;
+    text-align: left;
+}

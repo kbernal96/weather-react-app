@@ -1,14 +1,13 @@
 import "./App.css";
-import SearchEngine from "./SearchEngine";
+import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <SearchEngine />
+      <Weather defaultCity="Madrid"/>
       <footer>
-        Coded by 
-        <a className="coder" href="https://github.com/kbernal96/weather-react-app" target="_blank" rel="noreferrer">Karla Bernal</a>
+        Open-source code by 
+        <a className="coder" href="https://github.com/kbernal96/weather-react-app" target="_blank" rel="noreferrer"> Karla Bernal</a>
       </footer>
     </div>
   );
