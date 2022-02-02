@@ -4,12 +4,11 @@ import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [load, loadSuccess] = useState(false);
-  const [weatherData, displayData] = useState({});
+  const [weatherData, displayData] = useState({ load:false });
 
   function handleResponse(response) {
-    loadSuccess(true);
     displayData({
+      load:true,
       city: response.data.name,
       date: new Date(response.data.dt * 1000), 
       temperature: Math.round(response.data.main.temp),
@@ -21,7 +20,7 @@ export default function Weather(props) {
   
   }
 
-if (load) {
+if (weatherData.load) {
   return (
     <div className="Weather">
       <div className="container">
