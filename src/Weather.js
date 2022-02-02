@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import FormattedDate from  "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -9,16 +8,16 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     loadSuccess(true);
-    console.log(response.data);
     displayData({
-      name: response.data.name,
-      date: new Date(response.data.dt * 1000), 
+      city: response.data.name,
+      date: "tues", 
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       feelsLike: Math.round(response.data.main.feels_like)
     });
+  
   }
 
 if (load) {
@@ -29,25 +28,25 @@ if (load) {
           <input type="search" placeholder="Enter a city..."/>
           <input className="ms-2" type="submit" value="submit"/>
         </form>
-        <h5 className="city"> {props.data.name},
+        <h5 className="city"> {weatherData.city},
                 <span className="country"> Spain </span>
             </h5>
             <p>
-                <FormattedDate date={props.data.date} />
+                {weatherData.date}
             </p>
             <br/>
             <div className="row">
                 <div className="col-6 temperature">
                 <strong>
-                    {props.data.temperature}
+                    {props.weatherData.temperature}
                 </strong>
                 </div>
                 <div className="col-6 information">
                 <ul>
-                    <li className="text-capitalize">{props.data.description}</li>
-                    <li>{props.data.wind} mph</li>
-                    <li>{props.data.humidity} %</li>
-                    <li>{props.data.feelsLike} °</li>
+                    <li className="text-capitalize">{props.weatherData.description}</li>
+                    <li>{props.weatherData.wind} mph</li>
+                    <li>{props.weatherData.humidity} %</li>
+                    <li>{props.weatherData.feelsLike} °</li>
                 </ul>
                 </div>
             </div>
