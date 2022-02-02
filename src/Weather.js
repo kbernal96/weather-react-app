@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -10,7 +11,7 @@ export default function Weather(props) {
     loadSuccess(true);
     displayData({
       city: response.data.name,
-      date: "tues", 
+      date: new Date(response.data.dt * 1000), 
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
@@ -32,21 +33,21 @@ if (load) {
                 <span className="country"> Spain </span>
             </h5>
             <p>
-                {weatherData.date}
+              <FormattedDate date={weatherData.date} />
             </p>
             <br/>
             <div className="row">
                 <div className="col-6 temperature">
                 <strong>
-                    {props.weatherData.temperature}
+                    {weatherData.temperature}
                 </strong>
                 </div>
                 <div className="col-6 information">
                 <ul>
-                    <li className="text-capitalize">{props.weatherData.description}</li>
-                    <li>{props.weatherData.wind} mph</li>
-                    <li>{props.weatherData.humidity} %</li>
-                    <li>{props.weatherData.feelsLike} °</li>
+                    <li className="text-capitalize">{weatherData.description}</li>
+                    <li>{weatherData.wind} mph</li>
+                    <li>{weatherData.humidity} %</li>
+                    <li>{weatherData.feelsLike} °</li>
                 </ul>
                 </div>
             </div>
