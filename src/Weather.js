@@ -31,9 +31,7 @@ if (weatherData.load) {
         <h5 className="city"> {weatherData.city},
                 <span className="country"> Spain </span>
             </h5>
-            <p>
               <FormattedDate date={weatherData.date} />
-            </p>
             <br/>
             <div className="row">
                 <div className="col-6 temperature">
