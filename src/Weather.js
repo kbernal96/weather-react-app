@@ -17,7 +17,6 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      feelsLike: Math.round(response.data.main.feels_like)
     });
   
   }
@@ -44,7 +43,7 @@ if (weatherData.load) {
     <div className="Weather">
       <div className="container" >
         <form className="mb-3" onSubmit={handleSubmit}>
-          <input type="search" placeholder="Enter a city..." onChange={handleCityValue}/>
+          <input type="search" placeholder="Enter a city..." autoFocus="on" onChange={handleCityValue}/>
           <input className="ms-2" type="submit" value="submit"/>
         </form>
 

@@ -22,8 +22,8 @@ export default function Temperature(props) {
                 <strong className="temperature">
                     {props.fahrenheit}
                 </strong>
-                <span className="unit">°F |
-                    <a href="/" className="fahrenheit text-decoration-none" onClick={convertToCelsius}> °C</a>
+                <span className="unit">°F {" "}
+                      <a href="/" className="fahrenheit text-decoration-none" onClick={convertToCelsius}> | °C</a>
                 </span>
             </span> 
         );
@@ -34,8 +34,8 @@ export default function Temperature(props) {
                     {celsius()}
                 </strong>
                 <span className="unit">
-                    <a href="/" className="celsius text-decoration-none" onClick={convertToFahrenheit}>°F </a>
-                | °C
+                    <a href="/" className="celsius text-decoration-none" onClick={convertToFahrenheit}>°F | </a> 
+                 °C
                 </span>
             </span> 
         );

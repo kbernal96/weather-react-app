@@ -1,7 +1,10 @@
 import React from "react";
+import { FiWind } from 'react-icons/fi';
+import { WiHumidity } from 'react-icons/wi';
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
+import "./WeatherInfo.css";
 
 
 export default function WeatherInfo(props) {
@@ -23,12 +26,12 @@ export default function WeatherInfo(props) {
                     <ul>
                         <li className="text-capitalize"> 
                         <span><WeatherIcon class="float-left" code={props.data.icon} /></span>
-                         {props.data.description}</li>
-                        <li>{props.data.wind} mph</li>
-                        <li>{props.data.humidity} %</li>
-                        <li>{props.data.feelsLike} °</li>
+                        {props.data.description}</li>
+                        <li> <FiWind /> {props.data.wind} mph</li>
+                        <li> <WiHumidity />{props.data.humidity} %</li>
                     </ul>
                 </div>
+        
             </div>
             <div className="forecast grid">
                 Forecast
