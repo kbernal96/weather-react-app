@@ -11,3 +11,8 @@ h5 {
     font-weight: lighter;
     opacity: 50%;
 }
+
+.information li {
+    line-height: 1.5;
+}
+

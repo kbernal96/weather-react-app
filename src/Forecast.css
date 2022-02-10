@@ -1,0 +1,8 @@
+.Forecast {
+    text-align: center;
+}
+
+.Forecast .low {
+    opacity: 0.5;
+    margin-top: 5px;
+}
