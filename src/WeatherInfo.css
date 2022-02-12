@@ -3,6 +3,12 @@ h5 {
     font-weight: light;
     letter-spacing: 2px;
     font-size: 20px;
+    line-height: 1em;
+}
+
+.header-info {
+    position: relative;
+    top: -3.5em;
 }
 
 .city {
@@ -23,10 +29,9 @@ h5 {
     font-weight: bolder;
     font-size: 20px;
     position: relative;
-    top: -40px;
+    top: -55px;
     margin-left: 5px;
-    line-height: 1;
-    text-align: right;
+    line-height: 20px;
 }
 
 .unit a {
@@ -35,15 +40,30 @@ h5 {
     font-size: 15px;
   }
 
-  .temperature {
-    font-size: 75px;
+.temperature {
+    font-size: 95px;
     font-weight: bold;
-    text-align: right;
-    line-height: 75px;
+    line-height: 95px;
+}
+
+.Temperature {
+    margin-right: 0;
+    padding-right: 0;
+    float:right;
 }
 
 .information li {
     list-style-type: none;
+    line-height: 1.5em;
     text-align: left;
-    line-height: 1.5;
+    margin-left: 0;
+    padding-left: 0;
 }
+
+.information {
+    padding-top: 1em;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+

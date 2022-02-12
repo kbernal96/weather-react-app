@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BallTriangle } from  'react-loader-spinner';
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
@@ -13,6 +14,7 @@ export default function Weather(props) {
       load:true,
       coordinates: response.data.coord,
       city: response.data.name,
+      country: response.data.sys.country,
       date: new Date(response.data.dt * 1000), 
       temperature: Math.round(response.data.main.temp),
       icon: response.data.weather[0].icon,
@@ -63,6 +65,13 @@ if (weatherData.load) {
   } else {
     search(city);
 
-    return "Loading...";
+    return (
+      <BallTriangle
+        heigth="100"
+        width="100"
+        color="grey"
+        ariaLabel="loading-indicator"
+      />
+    );
   }
 }

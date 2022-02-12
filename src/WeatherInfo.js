@@ -13,13 +13,13 @@ export default function WeatherInfo(props) {
         <div className="WeatherInfo">
             <div className="header-info">
                 <h5 className="city"> {props.data.city},
-                    <span className="country"> USA </span>
+                    <span className="country"> {props.data.country} </span>
                 </h5>
                     <FormattedDate date={props.data.date} />
             </div>
             <br/>
-            <div className="row">
-                <div className="col-6">
+            <div className="row ">
+                <div className="col-6 mb-5">
 
                     <Temperature fahrenheit={props.data.temperature} />
                     

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { BallTriangle } from  'react-loader-spinner';
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
@@ -23,7 +24,7 @@ export default function Forecast(props) {
 
     if (loadSuccess) {
         return (
-            <div className="Forecast grid mt-3">
+            <div className="Forecast grid mt-5">
                 <div className="row">
                     {forecast.map(function (day,index) {
                         if (index < 5) {
@@ -49,6 +50,13 @@ export default function Forecast(props) {
 
         axios.get(url).then(handleResponse);
 
-        return null;
+        return (
+            <BallTriangle
+                heigth="100"
+                width="100"
+                color="white"
+                ariaLabel="loading-indicator"
+            />
+        )    
     }
 }
