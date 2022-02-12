@@ -44,13 +44,19 @@ if (weatherData.load) {
   return (
     <div className="Weather">
       <div className="container" >
-        <form className="mb-3" onSubmit={handleSubmit}>
-          <input type="search" placeholder="Enter a city..." autoFocus="on" onChange={handleCityValue}/>
-          <input className="ms-2" type="submit" value="submit"/>
-        </form>
+       
+        <div className="search-container">
+          <form action="/search" method="get" className="mb-3" onSubmit={handleSubmit}>
+            <input  type="search" className="search" id="searchleft" name="q" placeholder="Enter a city..." onChange={handleCityValue}/>
+            <label className="button searchbutton" for="searchleft">+</label>
+          </form>
+        </div>
+        <div className="weather-data-body">
 
-        <WeatherInfo data={weatherData}/>
-        <Forecast coordinates={weatherData.coordinates}/>
+          <WeatherInfo data={weatherData}/>
+          <Forecast coordinates={weatherData.coordinates}/>
+          
+        </div>
       </div>
     </div>
     );

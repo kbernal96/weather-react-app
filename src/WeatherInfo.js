@@ -7,14 +7,16 @@ import Temperature from "./Temperature";
 import "./WeatherInfo.css";
 
 
+
 export default function WeatherInfo(props) {
     return (
         <div className="WeatherInfo">
-
-            <h5 className="city"> {props.data.city},
-                <span className="country"> USA </span>
-            </h5>
-                <FormattedDate date={props.data.date} />
+            <div className="header-info">
+                <h5 className="city"> {props.data.city},
+                    <span className="country"> USA </span>
+                </h5>
+                    <FormattedDate date={props.data.date} />
+            </div>
             <br/>
             <div className="row">
                 <div className="col-6">

@@ -3,7 +3,14 @@ h5 {
     font-weight: light;
     letter-spacing: 2px;
     font-size: 20px;
+}
+
+.city {
     opacity: 75%;
+}
+
+.country {
+    opacity: 50%;
 }
 
 .FormattedDate {
@@ -12,7 +19,31 @@ h5 {
     opacity: 50%;
 }
 
-.information li {
-    line-height: 1.5;
+.unit {
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    top: -40px;
+    margin-left: 5px;
+    line-height: 1;
+    text-align: right;
 }
 
+.unit a {
+    color: white;
+    font-weight: 400l;
+    font-size: 15px;
+  }
+
+  .temperature {
+    font-size: 75px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 75px;
+}
+
+.information li {
+    list-style-type: none;
+    text-align: left;
+    line-height: 1.5;
+}

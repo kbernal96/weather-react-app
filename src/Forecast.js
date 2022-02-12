@@ -43,6 +43,7 @@ export default function Forecast(props) {
         );
 
     } else {
+        //can be a function on its own
         const apiKey = `18f68700369f5317f6cbee485851bf9b`;
         let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.coordinates.lat}&lon=${props.coordinates.lon}&appid=${apiKey}&units=imperial`;
 
