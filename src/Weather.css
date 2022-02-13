@@ -87,7 +87,13 @@
 }
 
 .search:focus {
-	width: 380px; /* Bar width+1px */
+	width: 310px; /* Bar width+1px */
 	padding: 0 16px 0 0;
 }
 
+.weather-forecast {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

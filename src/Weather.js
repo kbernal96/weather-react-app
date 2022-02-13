@@ -56,7 +56,9 @@ if (weatherData.load) {
         <div className="weather-data-body">
 
           <WeatherInfo data={weatherData}/>
-          <Forecast coordinates={weatherData.coordinates}/>
+          <div className="weather-forecast">
+            <Forecast coordinates={weatherData.coordinates}/>
+          </div>
           
         </div>
       </div>
